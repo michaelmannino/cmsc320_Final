@@ -14272,6 +14272,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Breast cancer is a type of cancer that starts in the breast. Cancer starts when cells begin to grow out of control. Breast cancer can occur in women and rarely in men. Symptoms of breast cancer include a lump in the breast, bloody discharge from the nipple, and changes in the shape or texture of the nipple or breast. The treatment of breast cancer depends on the stage of cancer. It may consist of chemotherapy, radiation, and surgery. About 1 in 8 U.S. women (about 12%) will develop invasive breast cancer over the course of her lifetime; it is the most commonly diagnosed cancer amoung American woman besides skin cancer.</p>
 <p>Given these horrific statistics, the goal of this project is to develop a model able to predict brest cancer in women. The model will be built off patient data provided in 2018. The dataset consists of anthropometric data and other measurements from both breast cancer patients and healthy controls. Anthropometric data includes any data on human body size and shape. All other data provided can collected during a routine blood analysis.</p>
+<p>Link to data: <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra">https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra</a></p>
 
 </div>
 </div>
@@ -33862,6 +33863,9 @@ z
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now equiped with out standardized data, let us jump into some modeling. This is not yet the prediction model, but modeling our data as distributions. Statistical distributions provide parameterized mathematical functions that can be used to calculate the probability for any individual observation from the sample space. Essentially, distributions are heavily studied areas of statistics that tend to show up in everyday life. The distributions that I am going to be attempting to fit are the Normal, Gamma, and Beta distributions. Should we find a distribution that fits out data properly, statisticians would be able to tell us a lot more about our data.</p>
+<p>Read more about the Normal: <a href="https://en.wikipedia.org/wiki/Normal_distribution">https://en.wikipedia.org/wiki/Normal_distribution</a><br>
+Read more about the Gamma: <a href="https://en.wikipedia.org/wiki/Gamma_distribution">https://en.wikipedia.org/wiki/Gamma_distribution</a><br>
+Read more about the Beta: <a href="https://en.wikipedia.org/wiki/Beta_distribution">https://en.wikipedia.org/wiki/Beta_distribution</a></p>
 <p>Let us begin by writing some funcitons to produce these distributions. Then, let us modify our histogram function from above to also include the distributions.</p>
 
 </div>
@@ -66345,6 +66349,7 @@ Healthy controls have a high correlation between resistin and leptin while cance
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now that we have performed all of our manual data analysis, let us jump into creating our prediction model. In order to do this, I have decided on using support vector machines or SVM. A support vector machine is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving a SVM model sets of labeled training data for each category, it is able to mathematically categorize the inputs. Essentially, we are going to use our individuals are inputs in order to create and train a model that can classify future inputs.</p>
 <p>The basics of SVM are quite simple. Take in vector-based data (a vector of length 9 in our case; 1 dimension per each variable) and the vector's classification (cancer patient or healthy control). Should that input data be plotted, there exists a hyperplane that can divide the data in half by classification such that all of the points of one classification are on one side and all points of another are on the other side. This hyperplane should also maximize the margin between the closest points to the plane. If this hyperplane does not exist, apply a scale function to all the data until this hyperplane exists. The complex part of the algorithm is determining the hyperplane and scaling data until one exists, but that complex linear algebra and higher dimensional calculus has been implemented for us in libraries.</p>
+<p>Read more about SVM: <a href="https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/#:~:text=A%20support%20vector%20machine%20(SVM,able%20to%20categorize%20new%20text">https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/#:~:text=A%20support%20vector%20machine%20(SVM,able%20to%20categorize%20new%20text</a></p>
 <p>As usual, let us begin by defining functions that will assist us in our analysis.</p>
 
 </div>
